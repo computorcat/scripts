@@ -24,7 +24,6 @@ xhr.onload = function ()
         htmlOutput += 'description';
         htmlOutput += 'date';
     });
-    console.log(htmlOutput);
     document.getElementById("div where you want the html to go").innerHTML = htmlOutput;
   } 
   else 
