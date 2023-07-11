@@ -3,8 +3,10 @@ var rssFeedUrl = 'insert rss feed here';
 var xhr = new XMLHttpRequest();
 xhr.open('GET', rssFeedUrl, true);
 xhr.responseType = 'document';
-xhr.onload = function () {
-  if (xhr.status === 200) {
+xhr.onload = function () 
+{
+  if (xhr.status === 200) 
+  {
     var items = xhr.responseXML.querySelectorAll('item');
     var htmlOutput = '';
     items.forEach(function (item) {
@@ -19,7 +21,9 @@ xhr.onload = function () {
     });
     console.log(htmlOutput);
     document.getElementById("div where you want the html to go").innerHTML = htmlOutput;
-  } else {
+  } 
+  else 
+  {
     console.error('Error fetching the RSS feed. Status code:', xhr.status);
   }
 };
